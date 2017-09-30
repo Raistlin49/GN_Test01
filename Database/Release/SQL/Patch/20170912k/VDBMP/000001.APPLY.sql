@@ -1,1 +1,2 @@
 SELECT 'ASDF';
+SELECT 'asdf';
