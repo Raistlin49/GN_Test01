@@ -1,2 +1,3 @@
 SELECT 'ASDF';
 SELECT 'asdf';
+PRINT 'CI TESTING...';
