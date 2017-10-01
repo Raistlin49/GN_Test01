@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-01-2017 02:13:00
+-- Created on:  10-01-2017 02:21:06
 -- Path: /Database/Release/SQL/Patch/20170912k/VDBMP
 -- Filter: Rollback
 --================================================================================================
@@ -24,6 +24,8 @@ SET QUOTED_IDENTIFIER ON;
 GO
 SELECT 'ASDF';
 SELECT 'asdf';
+PRINT 'CI TESTING...';
+
 ;
 GO
 PRINT 'Processing 000001.ROLLBACK.sql ******** End'
@@ -43,6 +45,7 @@ GO
 --third line
 --fourth line
 --fifth line
+PRINT 'CI TESTING...';
 
 ;
 GO
@@ -59,6 +62,8 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 --Second post to GitHub
+PRINT 'CI TESTING...';
+
 ;
 GO
 PRINT 'Processing 000003.ROLLBACK.sql ******** End'
