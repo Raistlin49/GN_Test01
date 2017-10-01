@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-01-2017 02:13:00
+-- Created on:  10-01-2017 02:21:06
 -- Path: /Database/Release/SQL/Patch/20170912k/VDBMP
 -- Filter: Apply
 --================================================================================================
