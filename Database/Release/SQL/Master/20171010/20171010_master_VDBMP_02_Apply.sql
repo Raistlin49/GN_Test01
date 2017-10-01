@@ -2,12 +2,14 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-01-2017 03:24:33
+-- Created on:  10-01-2017 03:29:48
 -- Path: /Database/Release/SQL/Patch/20171010/VDBMP
 -- Filter: Apply
 --================================================================================================
 -- Manifest --
 --   DS-0000.01.Alter.Apply.sql
+--   DS-0000.02.Alter.Apply.sql
+--   DS-0000.03.Alter.Apply.sql
 -- Manifest --
 
 --================================================================================================
@@ -24,6 +26,36 @@ PRINT 'Testing apply...'
 ;
 GO
 PRINT 'Processing DS-0000.01.Alter.Apply.sql ******** End'
+GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20171010/VDBMP/DS-0000.02.Alter.Apply.sql
+PRINT 'Processing DS-0000.02.Alter.Apply.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+PRINT 'Testing apply...'
+;
+GO
+PRINT 'Processing DS-0000.02.Alter.Apply.sql ******** End'
+GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20171010/VDBMP/DS-0000.03.Alter.Apply.sql
+PRINT 'Processing DS-0000.03.Alter.Apply.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+PRINT 'Testing apply...'
+;
+GO
+PRINT 'Processing DS-0000.03.Alter.Apply.sql ******** End'
 GO
 --================================================================================================
 SET ANSI_NULLS ON;
