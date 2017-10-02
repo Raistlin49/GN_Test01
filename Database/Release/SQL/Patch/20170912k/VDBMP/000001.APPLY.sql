@@ -1,2 +1,0 @@
-SELECT 'ASDF';
-SELECT 'asdf';
