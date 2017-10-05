@@ -1,0 +1,1 @@
+PRINT 'Testing code in the apply script...'
