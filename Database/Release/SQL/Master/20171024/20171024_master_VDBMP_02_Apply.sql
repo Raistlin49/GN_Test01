@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-15-2017 01:44:34
+-- Created on:  10-15-2017 02:04:33
 -- Path: /Database/Release/SQL/Patch/20171024/VDBMP
 -- Filter: Apply
 --================================================================================================
@@ -20,7 +20,8 @@ SET ANSI_PADDING ON;
 GO
 SET QUOTED_IDENTIFIER ON;
 GO
-PRINT 'Testing code in the apply script...'
+PRINT 'Testing code in the apply script...';
+PRINT 'The 2:02 AM line';
 ;
 GO
 PRINT 'Processing DS-1024.01.Alter.Apply.sql ******** End'
