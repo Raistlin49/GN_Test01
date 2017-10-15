@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-15-2017 02:13:23
+-- Created on:  10-15-2017 03:19:19
 -- Path: /Database/Release/SQL/Patch/20171024/VDBMP
 -- Filter: Apply
 --================================================================================================
@@ -40,6 +40,7 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 PRINT '02 - Testing code in the apply script...';
+PRINT 'The 3:18 AM line';
 
 ;
 GO
