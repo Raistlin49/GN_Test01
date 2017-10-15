@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-15-2017 03:23:34
+-- Created on:  10-15-2017 03:26:09
 -- Path: /Database/Release/SQL/Patch/20171024/VDBMP
 -- Filter: Apply
 --================================================================================================
@@ -42,7 +42,7 @@ GO
 PRINT '02 - Testing code in the apply script...';
 PRINT 'The 3:18 AM line';
 PRINT '';
-
+PRINT '3:24 AM';
 ;
 GO
 PRINT 'Processing DS-1024.02.Alter.Apply.sql ******** End'
