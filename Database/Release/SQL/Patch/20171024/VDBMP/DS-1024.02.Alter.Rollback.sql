@@ -1,0 +1,1 @@
+PRINT '02 - Testing code in the rollback script...'
