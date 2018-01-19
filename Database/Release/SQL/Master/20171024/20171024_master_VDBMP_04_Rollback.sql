@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  01-18-2018 20:15:23
+-- Created on:  01-18-2018 20:18:09
 -- Path: /Database/Release/SQL/Patch/20171024/VDBMP
 -- Filter: Rollback
 --================================================================================================
@@ -41,6 +41,8 @@ SET QUOTED_IDENTIFIER ON;
 GO
 PRINT '02 - Testing code in the rollback script...'
 PRINT '3:24 AM';
+PRINT '08:17 AM';
+
 ;
 GO
 PRINT 'Processing DS-1024.02.Alter.Rollback.sql ******** End'
