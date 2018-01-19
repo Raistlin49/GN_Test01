@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  01-18-2018 20:15:23
+-- Created on:  01-18-2018 20:18:09
 -- Path: /Database/Release/SQL/Patch/20171024/VDBMP
 -- Filter: Apply
 --================================================================================================
@@ -76,11 +76,11 @@ END;
 
 IF EXISTS (SELECT 1 FROM [dbo].[dbverinfo] WHERE [BuildConfigId] = 13)
 	BEGIN
-		UPDATE [dbo].[dbverinfo] SET [BuildKey] = '25ebafaf-4b28-48bf-99d1-1292d084f58e' WHERE [BuildConfigId] = 13
+		UPDATE [dbo].[dbverinfo] SET [BuildKey] = '4e564312-ee39-49e4-b76e-b1b5584a4b53' WHERE [BuildConfigId] = 13
 	END
 ELSE
 	BEGIN
 		INSERT INTO [dbo].[dbverinfo]
 				( [BuildConfigId], [BuildKey] )
-		VALUES  ( 13, '25ebafaf-4b28-48bf-99d1-1292d084f58e')
+		VALUES  ( 13, '4e564312-ee39-49e4-b76e-b1b5584a4b53')
 	END;
