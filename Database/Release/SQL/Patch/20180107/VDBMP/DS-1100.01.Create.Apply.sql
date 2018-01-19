@@ -6,3 +6,6 @@ GO
 
 SELECT GETDATE();
 GO
+
+PRINT 'DONE';
+GO
