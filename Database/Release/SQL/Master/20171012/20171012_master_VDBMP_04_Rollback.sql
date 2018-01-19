@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  10-03-2017 17:02:19
+-- Created on:  01-18-2018 18:59:06
 -- Path: /Database/Release/SQL/Patch/20171012/VDBMP
 -- Filter: Rollback
 --================================================================================================
@@ -65,6 +65,9 @@ GO
 
 PRINT 'This is some test code for DS-0010.03.Alter.Rollback';
 GO
+
+PRINT 'Change'
+
 ;
 GO
 PRINT 'Processing DS-0010.03.Alter.Rollback.sql ******** End'
