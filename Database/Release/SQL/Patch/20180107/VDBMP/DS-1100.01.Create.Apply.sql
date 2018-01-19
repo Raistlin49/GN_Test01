@@ -9,3 +9,6 @@ GO
 
 PRINT 'DONE';
 GO
+
+SELECT 'asdf';
+GO
