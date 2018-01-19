@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  01-18-2018 23:04:49
+-- Created on:  01-19-2018 16:43:17
 -- Path: /Database/Release/SQL/Patch/20180107/VDBMP
 -- Filter: Apply
 --================================================================================================
@@ -31,6 +31,10 @@ GO
 
 PRINT 'DONE';
 GO
+
+SELECT 'asdf';
+GO
+
 ;
 GO
 PRINT 'Processing DS-1100.01.Create.Apply.sql ******** End'
@@ -59,11 +63,11 @@ END;
 
 IF EXISTS (SELECT 1 FROM [dbo].[dbverinfo] WHERE [BuildConfigId] = 13)
 	BEGIN
-		UPDATE [dbo].[dbverinfo] SET [BuildKey] = '283f0625-67f8-4377-9d2d-6dd0fe47e894' WHERE [BuildConfigId] = 13
+		UPDATE [dbo].[dbverinfo] SET [BuildKey] = 'e16fe920-e430-495b-b5d8-8b0dad63dce4' WHERE [BuildConfigId] = 13
 	END
 ELSE
 	BEGIN
 		INSERT INTO [dbo].[dbverinfo]
 				( [BuildConfigId], [BuildKey] )
-		VALUES  ( 13, '283f0625-67f8-4377-9d2d-6dd0fe47e894')
+		VALUES  ( 13, 'e16fe920-e430-495b-b5d8-8b0dad63dce4')
 	END;
