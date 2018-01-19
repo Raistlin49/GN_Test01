@@ -1,4 +1,4 @@
-USE CRM;
+USE asdf;
 GO
 
 SELECT 'Happy New Year - Apply';
