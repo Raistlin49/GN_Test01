@@ -2,7 +2,7 @@
 -- Description: SQL Release Script
 -- Created by:  Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on:  01-18-2018 23:04:49
+-- Created on:  01-19-2018 16:43:17
 -- Path: /Database/Release/SQL/Patch/20180107/VDBMP
 -- Filter: Rollback
 --================================================================================================
