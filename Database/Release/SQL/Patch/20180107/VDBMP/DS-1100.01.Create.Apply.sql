@@ -12,3 +12,6 @@ GO
 
 SELECT 'asdf';
 GO
+
+SELECT GETDATE();
+GO
