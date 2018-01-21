@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on: 2018-01-21 00: 22:43
+-- Created on: 2018-01-21 18: 23:52
 -- Path: /Database/Release/SQL/Master/20180109/20180109_master_VDBMP_02_Apply.sql
 -- Sprint: 20180109 VDBMP
 -- Filter: Apply
@@ -12,6 +12,7 @@ GO
 
 --=====MANIFEST===================================================================================
 --   DS-1234.01.MyNewCode.Apply.sql
+--   DS-1234.02.MyNewCode.Apply.sql
 
 --=====PATCHES====================================================================================
 
@@ -39,9 +40,31 @@ GO
 
 SELECT 1234;
 GO
+
+SELECT 12345;
+GO
 ;
 GO
 PRINT 'Processing DS-1234.01.MyNewCode.Apply.sql ******** End'
+GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20180109/VDBMP/DS-1234.02.MyNewCode.Apply.sql
+PRINT 'Processing DS-1234.02.MyNewCode.Apply.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+USE CRM;
+GO
+
+PRINT 'New file for branch - apply';
+GO
+;
+GO
+PRINT 'Processing DS-1234.02.MyNewCode.Apply.sql ******** End'
 GO
 
 --=====DBVERINFO==================================================================================
@@ -85,7 +108,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (13, '4232871c-7fe1-4a9e-b050-5012a7614a95', '20180109 VDBMP', 'Apply', GETDATE());
+	VALUES (13, '24ba7265-75b9-4ffd-9db6-bd83964a2826', '20180109 VDBMP', 'Apply', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
