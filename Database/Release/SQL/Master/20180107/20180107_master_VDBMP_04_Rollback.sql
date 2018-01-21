@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script;
 -- Created by: Data Services;
 -- Machine: TGC-LT-94JMM12;
--- Created on: 2018-01-20 20: 37:42
+-- Created on: 2018-01-20 21: 25:18
 -- Path: /Database/Release/SQL/Master/20180107/20180107_master_VDBMP_04_Rollback.sql
 -- Sprint: 20180107 VDBMP
 -- Filter: Rollback;
@@ -25,6 +25,9 @@ USE CRM;
 GO
 
 SELECT 'Happy New Year - Rollback';
+GO
+
+SELECT GETDATE();
 GO
 
 SELECT GETDATE();
@@ -75,13 +78,21 @@ BEGIN
 
 END
 GO
+--Add Note column
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbverinfo', 'U') AND name = 'EventNote' )
+BEGIN
+
+	ALTER TABLE [dbverinfo] ADD [EventNote] VARCHAR(1000) NULL;
+
+END
+GO
 --*************************************--
 USE CRM;
 GO
 
 --Add event
-INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, MasterType, EventDate)
-	VALUES (13, '303626be-17d3-48b4-a075-11fd5c347ffa', 'Rollback', GETDATE());
+INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, MasterType, EventDate, EventNote)
+	VALUES (13, '0d8656ba-a633-471d-9335-b2590a36a8b4', 'Rollback', GETDATE(), '20180107 VDBMP');
 GO
 --=====FOOTER=====================================================================================
 SET ANSI_NULLS ON;;
