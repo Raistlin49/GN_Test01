@@ -35,11 +35,11 @@ END;
 
 IF EXISTS (SELECT 1 FROM [dbo].[dbverinfo] WHERE [BuildConfigId] = 13)
 	BEGIN
-		UPDATE [dbo].[dbverinfo] SET [BuildKey] = 'dfff0584-e935-4960-8994-3cd46b902306' WHERE [BuildConfigId] = 13
+		UPDATE [dbo].[dbverinfo] SET [BuildKey] = '5241e1cb-080b-4e99-961b-c980351ef68e' WHERE [BuildConfigId] = 13
 	END
 ELSE
 	BEGIN
 		INSERT INTO [dbo].[dbverinfo]
 				( [BuildConfigId], [BuildKey] )
-		VALUES  ( 13, 'dfff0584-e935-4960-8994-3cd46b902306')
+		VALUES  ( 13, '5241e1cb-080b-4e99-961b-c980351ef68e')
 	END;
