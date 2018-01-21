@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on: 2018-01-20 22: 47:19
+-- Created on: 2018-01-21 00: 22:45
 -- Path: /Database/Release/SQL/Master/20180109/20180109_master_VDBMP_04_Rollback.sql
 -- Sprint: 20180109 VDBMP
 -- Filter: Rollback
@@ -76,7 +76,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (13, '3f373f66-a72c-43b9-92eb-fabb094c8417', '20180109 VDBMP', 'Rollback', GETDATE());
+	VALUES (13, '4232871c-7fe1-4a9e-b050-5012a7614a95', '20180109 VDBMP', 'Rollback', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
@@ -90,16 +90,15 @@ GO
 -- End of Script;
 
 --=====HELPTEXT===================================================================================
---<sprintdate>--
---<instance>--
---<verinfodb>--
---<buildkey>--
---<repomasterpath>--
---<buildconfigid>--
+--<{pathparse subexpr}>-- e.g. <sprintdate>-- e.g. --<instance>--
+--<verinfodb>--             --db containing dbverinfo table
+--<buildkey>--              --CI GUID per master changeset
+--<repomasterpath>--        --Path in repo to folder containing this master
+--<buildconfigid>--         --
 --<buildid>--
 --<changeset>--
 --<mastertype>--
---<templateid:{ci.templates.templateid}--
+--<templateid:{ci.templates.templateid}>--
 --<patches>--
 --<manifest>--
 --<ciservername>--
