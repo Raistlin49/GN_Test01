@@ -36,6 +36,10 @@ GO
 
 SELECT 123;
 GO
+
+SELECT 1234;
+GO
+
 ;
 GO
 PRINT 'Processing DS-1234.01.MyNewCode.Apply.sql ******** End'
