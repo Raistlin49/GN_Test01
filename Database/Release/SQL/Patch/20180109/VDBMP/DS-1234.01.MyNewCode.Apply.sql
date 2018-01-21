@@ -3,3 +3,6 @@ GO
 
 SELECT 1;
 GO
+
+SELECT 12;
+GO
