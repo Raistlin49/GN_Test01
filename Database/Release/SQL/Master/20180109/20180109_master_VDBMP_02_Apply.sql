@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on: 2018-01-20 22: 26:04
+-- Created on: 2018-01-20 22: 32:48
 -- Path: /Database/Release/SQL/Master/20180109/20180109_master_VDBMP_02_Apply.sql
 -- Sprint: 20180109 VDBMP
 -- Filter: Apply
@@ -24,6 +24,9 @@ USE CRM;
 GO
 
 SELECT 1;
+GO
+
+SELECT 12;
 GO
 ;
 GO
@@ -49,10 +52,9 @@ BEGIN
 
 	ALTER TABLE [dbverinfo] ADD [EventDate] DATETIME NULL;
 
-END
-GO
+	EXEC ('UPDATE [dbverinfo] SET [EventDate] = DATEADD(D, -1, GETDATE())');
 
-UPDATE [dbverinfo] SET [EventDate] = DATEADD(D, -1, GETDATE());
+END
 GO
 
 --Add Note column
@@ -69,7 +71,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, MasterType, EventDate, EventNote)
-	VALUES (13, 'bee5b4e1-f858-4e8c-9690-19e9eb27ae8c', 'Apply', GETDATE(), '20180109 VDBMP');
+	VALUES (13, '46f7743d-740f-4088-a615-020e6a7e1c15', 'Apply', GETDATE(), '20180109 VDBMP');
 GO
 --=====FOOTER=====================================================================================
 SET ANSI_NULLS ON;
