@@ -2,12 +2,17 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: TGC-LT-94JMM12
--- Created on: 2018-01-20 22: 32:48
+-- Created on: 2018-01-20 22: 47:17
 -- Path: /Database/Release/SQL/Master/20180109/20180109_master_VDBMP_02_Apply.sql
 -- Sprint: 20180109 VDBMP
 -- Filter: Apply
+
+SET DEADLOCK_PRIORITY HIGH;
+GO
+
 --=====MANIFEST===================================================================================
 --   DS-1234.01.MyNewCode.Apply.sql
+
 --=====PATCHES====================================================================================
 
 --================================================================================================
@@ -28,15 +33,29 @@ GO
 
 SELECT 12;
 GO
+
+SELECT 123;
+GO
 ;
 GO
 PRINT 'Processing DS-1234.01.MyNewCode.Apply.sql ******** End'
 GO
+
 --=====DBVERINFO==================================================================================
 USE CRM;
 GO
 
 --*****UPGRADE FROM v2 TO v3******--
+
+--Add Note column
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbverinfo', 'U') AND name = 'EventNote' )
+BEGIN
+
+	ALTER TABLE [dbverinfo] ADD [EventNote] VARCHAR(1000) NULL;
+
+END
+GO
+
 --Add MasterType column
 IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbverinfo', 'U') AND name = 'MasterType' )
 BEGIN
@@ -57,22 +76,15 @@ BEGIN
 END
 GO
 
---Add Note column
-IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbverinfo', 'U') AND name = 'EventNote' )
-BEGIN
-
-	ALTER TABLE [dbverinfo] ADD [EventNote] VARCHAR(1000) NULL;
-
-END
-GO
 --*************************************--
 USE CRM;
 GO
 
 --Add event
-INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, MasterType, EventDate, EventNote)
-	VALUES (13, '46f7743d-740f-4088-a615-020e6a7e1c15', 'Apply', GETDATE(), '20180109 VDBMP');
+INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
+	VALUES (13, '3f373f66-a72c-43b9-92eb-fabb094c8417', '20180109 VDBMP', 'Apply', GETDATE());
 GO
+
 --=====FOOTER=====================================================================================
 SET ANSI_NULLS ON;
 GO
@@ -82,21 +94,21 @@ SET QUOTED_IDENTIFIER ON;
 GO
 --================================================================================================
 -- End of Script;
+
 --=====HELPTEXT===================================================================================
 --<sprintdate>--
-        --<instance>--
-        --<verinfodb>--
-        --<buildkey>--
-        --<repomasterpath>--
-        --<buildconfigid>--
-        --<buildid>--
-        --<changeset>--
-        --<mastertype>--
-        --<templateid:{ci.templates.templateid}--
-		--<patches>--
-		--<manifest>--
-        --<ciservername>--
-        --<builddate>--
-        --<helptext>--
-        --<buildconfigname>--
-        
+--<instance>--
+--<verinfodb>--
+--<buildkey>--
+--<repomasterpath>--
+--<buildconfigid>--
+--<buildid>--
+--<changeset>--
+--<mastertype>--
+--<templateid:{ci.templates.templateid}--
+--<patches>--
+--<manifest>--
+--<ciservername>--
+--<builddate>--
+--<helptext>--
+--<buildconfigname>--
