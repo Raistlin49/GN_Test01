@@ -6,3 +6,6 @@ GO
 
 SELECT 12;
 GO
+
+SELECT 123;
+GO
