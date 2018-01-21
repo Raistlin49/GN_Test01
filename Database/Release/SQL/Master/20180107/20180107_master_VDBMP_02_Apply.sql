@@ -46,7 +46,7 @@ GO
 USE CRM;
 GO
 
-PRINT '20180108 - File 2 - APPLY';
+PRINT '20180108 - File 2 - APPLY - master branch';
 GO
 
 SELECT GETDATE();
