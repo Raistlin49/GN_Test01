@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script;
 -- Created by: Data Services;
 -- Machine: TGC-LT-94JMM12;
--- Created on: 2018-01-20 20: 32:49
+-- Created on: 2018-01-20 20: 37:40
 -- Path: /Database/Release/SQL/Master/20180107/20180107_master_VDBMP_02_Apply.sql
 -- Sprint: 20180107 VDBMP
 -- Filter: Apply;
@@ -61,14 +61,6 @@ GO
 SELECT GETDATE();
 GO
 
-SELECT GETDATE();
-GO
-
-SELECT GETDATE();
-GO
-
-SELECT GETDATE();
-GO
 ;
 GO
 PRINT 'Processing DS-1100.02.Create.Apply.sql ******** End'
@@ -101,7 +93,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, MasterType, EventDate)
-	VALUES (13, b70fb772-fb1e-412f-a5fb-1ca77ddc46a4, Apply, GETDATE());
+	VALUES (13, '303626be-17d3-48b4-a075-11fd5c347ffa', 'Apply', GETDATE());
 GO
 --=====FOOTER=====================================================================================
 SET ANSI_NULLS ON;;
