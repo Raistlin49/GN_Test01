@@ -1,56 +1,25 @@
---=====HEADER=====================================================================================
--- Description:	SQL Release Script;
--- Created by: Data Services;
--- Machine: TGC-LT-94JMM12;
--- Created on: 2018-01-20 03: 49:21
--- Path: /Database/Release/SQL/Master/20180107/20180107_master_VDBMP_02_Apply.sql
--- Sprint: 20180107 VDBMP
--- Filter: Apply;
---=====MANIFEST===================================================================================
---   DS-1100.01.Create.Apply.sql
---=====PATCHES====================================================================================
-
---================================================================================================
--- /Database/Release/SQL/Patch/20180107/VDBMP/DS-1100.01.Create.Apply.sql
-PRINT 'Processing DS-1100.01.Create.Apply.sql ******** Start'
-GO
-SET ANSI_NULLS ON;
-GO
-SET ANSI_PADDING ON;
-GO
-SET QUOTED_IDENTIFIER ON;
-GO
 USE CRM;
 GO
 
-SELECT 'Happy New Year - Apply';
+--*****UPGRADE FROM v2 TO v3******--
+--Add MasterType column
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbverinfo', 'U') AND name = 'MasterType' )
+BEGIN
+
+	ALTER TABLE [dbverinfo] ADD [MasterType] VARCHAR(100) NULL;
+
+END
 GO
 
-SELECT GETDATE();
-GO
+--Add EventDate column
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbverinfo', 'U') AND name = 'EventDate' )
+BEGIN
 
-PRINT 'DONE';
-GO
+	ALTER TABLE [dbverinfo] ADD [EventDate] DATETIME NULL;
 
-SELECT 'asdf';
+END
 GO
-
-SELECT GETDATE();
-GO
-;
-GO
-PRINT 'Processing DS-1100.01.Create.Apply.sql ******** End'
-GO
---=====FOOTER=====================================================================================
-SET ANSI_NULLS ON;;
-GO;
-SET ANSI_PADDING ON;;
-GO;
-SET QUOTED_IDENTIFIER ON;;
-GO;
---================================================================================================
--- End of Script;
-
+--*************************************--
 
 USE [CRM]
 GO
@@ -66,11 +35,11 @@ END;
 
 IF EXISTS (SELECT 1 FROM [dbo].[dbverinfo] WHERE [BuildConfigId] = 13)
 	BEGIN
-		UPDATE [dbo].[dbverinfo] SET [BuildKey] = '82d3ca8e-b06c-41fe-a682-ff9ea3da00a0' WHERE [BuildConfigId] = 13
+		UPDATE [dbo].[dbverinfo] SET [BuildKey] = 'dfff0584-e935-4960-8994-3cd46b902306' WHERE [BuildConfigId] = 13
 	END
 ELSE
 	BEGIN
 		INSERT INTO [dbo].[dbverinfo]
 				( [BuildConfigId], [BuildKey] )
-		VALUES  ( 13, '82d3ca8e-b06c-41fe-a682-ff9ea3da00a0')
+		VALUES  ( 13, 'dfff0584-e935-4960-8994-3cd46b902306')
 	END;
