@@ -1,0 +1,5 @@
+USE CRM;
+GO
+
+SELECT 2;
+GO
