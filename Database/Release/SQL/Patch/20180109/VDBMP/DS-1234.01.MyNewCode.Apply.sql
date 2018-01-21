@@ -9,3 +9,6 @@ GO
 
 SELECT 123;
 GO
+
+SELECT 1234;
+GO
