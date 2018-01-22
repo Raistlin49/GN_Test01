@@ -3,4 +3,5 @@ GO
 
 PRINT '2018-01-22';
 PRINT '03:02pm';
+PRINT '03:07pm';
 GO
