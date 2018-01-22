@@ -1,5 +1,5 @@
 USE CRM;
 GO
 
-SELECT 2;
+PRINT '06:15pm';
 GO
