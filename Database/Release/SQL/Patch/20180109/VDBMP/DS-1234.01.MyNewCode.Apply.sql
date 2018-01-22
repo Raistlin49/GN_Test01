@@ -2,4 +2,5 @@ USE CRM;
 GO
 
 PRINT '2018-01-22';
+PRINT '03:02pm';
 GO
