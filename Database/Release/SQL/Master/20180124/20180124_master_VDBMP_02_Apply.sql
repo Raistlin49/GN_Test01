@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: USHGNDBWD018
--- Created on: 2018-01-23 20: 42:45
+-- Created on: 2018-01-23 21: 47:10
 -- Path: /Database/Release/SQL/Master/20180124/20180124_master_VDBMP_02_Apply.sql
 -- Sprint: 20180124 VDBMP
 -- Filter: Apply
@@ -14,6 +14,7 @@ GO
 --   DS-5555.01.Create.Apply.sql
 --   DS-5555.02.Create.Apply.sql
 --   DS-5555.03.Create.NewStuff.Apply.sql
+--   DS-5556.01.Create.proc.Apply.sql
 
 --=====PATCHES====================================================================================
 
@@ -70,6 +71,25 @@ GO
 GO
 PRINT 'Processing DS-5555.03.Create.NewStuff.Apply.sql ******** End'
 GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20180124/VDBMP/DS-5556.01.Create.proc.Apply.sql
+PRINT 'Processing DS-5556.01.Create.proc.Apply.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+USE CRM;
+GO
+
+SELECT 'ASDF';
+GO
+;
+GO
+PRINT 'Processing DS-5556.01.Create.proc.Apply.sql ******** End'
+GO
 
 --=====DBVERINFO==================================================================================
 USE CRM;
@@ -112,7 +132,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (15, '70b0cf23-6ec2-48f3-a13f-fad4846fdb6d', '20180124 VDBMP', 'Apply', GETDATE());
+	VALUES (15, 'c06d92ff-d29e-497b-ab74-c4c95ee5f074', '20180124 VDBMP', 'Apply', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
