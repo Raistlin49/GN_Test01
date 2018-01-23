@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: USHGNDBWD018
--- Created on: 2018-01-23 20: 42:45
+-- Created on: 2018-01-23 21: 47:10
 -- Path: /Database/Release/SQL/Master/20180124/20180124_master_VDBMP_04_Rollback.sql
 -- Sprint: 20180124 VDBMP
 -- Filter: Rollback
@@ -14,6 +14,7 @@ GO
 --   DS-5555.01.Create.Rollback.sql
 --   DS-5555.02.Create.Rollback.sql
 --   DS-5555.03.Create.NewStuff.Rollback.sql
+--   DS-5556.01.Create.proc.Rollback.sql
 
 --=====PATCHES====================================================================================
 
@@ -69,6 +70,25 @@ GO
 GO
 PRINT 'Processing DS-5555.03.Create.NewStuff.Rollback.sql ******** End'
 GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20180124/VDBMP/DS-5556.01.Create.proc.Rollback.sql
+PRINT 'Processing DS-5556.01.Create.proc.Rollback.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+USE CRM;
+GO
+
+SELECT 'ASDF';
+GO
+;
+GO
+PRINT 'Processing DS-5556.01.Create.proc.Rollback.sql ******** End'
+GO
 
 --=====DBVERINFO==================================================================================
 USE CRM;
@@ -111,7 +131,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (15, '70b0cf23-6ec2-48f3-a13f-fad4846fdb6d', '20180124 VDBMP', 'Rollback', GETDATE());
+	VALUES (15, 'c06d92ff-d29e-497b-ab74-c4c95ee5f074', '20180124 VDBMP', 'Rollback', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
