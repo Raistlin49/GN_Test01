@@ -1,0 +1,5 @@
+USE CRM;
+GO
+
+SELECT 'ASDF';
+GO
