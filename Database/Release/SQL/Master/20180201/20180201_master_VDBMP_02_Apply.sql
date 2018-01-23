@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: USHGNDBWD018
--- Created on: 2018-01-23 20: 58:02
+-- Created on: 2018-01-23 21: 13:54
 -- Path: /Database/Release/SQL/Master/20180201/20180201_master_VDBMP_02_Apply.sql
 -- Sprint: 20180201 VDBMP
 -- Filter: Apply
@@ -12,6 +12,8 @@ GO
 
 --=====MANIFEST===================================================================================
 --   DS-7777.01.Create.Apply.sql
+--   DS-7777.02.Create.Apply.sql
+--   DS-7777.03.Create.Apply.sql
 
 --=====PATCHES====================================================================================
 
@@ -31,6 +33,40 @@ GO
 ;
 GO
 PRINT 'Processing DS-7777.01.Create.Apply.sql ******** End'
+GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20180201/VDBMP/DS-7777.02.Create.Apply.sql
+PRINT 'Processing DS-7777.02.Create.Apply.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+PRINT 'New apply for 20180124';
+PRINT '20180123 02:50 PM';
+GO
+;
+GO
+PRINT 'Processing DS-7777.02.Create.Apply.sql ******** End'
+GO
+--================================================================================================
+-- /Database/Release/SQL/Patch/20180201/VDBMP/DS-7777.03.Create.Apply.sql
+PRINT 'Processing DS-7777.03.Create.Apply.sql ******** Start'
+GO
+SET ANSI_NULLS ON;
+GO
+SET ANSI_PADDING ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+PRINT 'New apply for 20180124';
+PRINT '20180123 02:50 PM';
+GO
+;
+GO
+PRINT 'Processing DS-7777.03.Create.Apply.sql ******** End'
 GO
 
 --=====DBVERINFO==================================================================================
@@ -74,7 +110,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (15, '12b9a2fb-b9d2-4c10-9719-30c677b91e57', '20180201 VDBMP', 'Apply', GETDATE());
+	VALUES (15, '61af8a8e-5ddd-4849-b937-e0182c6bede6', '20180201 VDBMP', 'Apply', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
