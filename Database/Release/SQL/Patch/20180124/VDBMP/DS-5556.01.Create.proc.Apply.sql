@@ -1,4 +1,4 @@
-USE CRM;
+USE ASDF;
 GO
 
 SELECT 'ASDF';
