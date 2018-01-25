@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: USHGNDBWD018
--- Created on: 2018-01-25 01: 32:51
+-- Created on: 2018-01-25 01: 58:59
 -- Path: /Database/Release/SQL/Master/20180201/20180201_master_VDBMP_02_Apply.sql
 -- Sprint: 20180201 VDBMP
 -- Filter: Apply
@@ -30,6 +30,7 @@ GO
 PRINT 'New apply for 20180124';
 PRINT '20180123 02:50 PM';
 PRINT 'Line 2';
+PRINT 'Line 4';
 GO
 ;
 GO
@@ -48,6 +49,7 @@ GO
 PRINT 'New apply for 20180124';
 PRINT '20180123 02:50 PM';
 PRINT 'Line 2';
+PRINT 'Line 4';
 GO
 ;
 GO
@@ -113,7 +115,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (15, '7bbce798-58e4-4f01-849c-48a85583f657', '20180201 VDBMP', 'Apply', GETDATE());
+	VALUES (15, 'dfc9d471-7455-45ed-ab9b-9e5d454c3e6a', '20180201 VDBMP', 'Apply', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
