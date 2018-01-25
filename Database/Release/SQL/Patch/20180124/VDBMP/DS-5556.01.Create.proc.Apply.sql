@@ -2,4 +2,5 @@ USE CRM;
 GO
 
 SELECT 'ASDF';
+PRINT 'Line 2';
 GO
