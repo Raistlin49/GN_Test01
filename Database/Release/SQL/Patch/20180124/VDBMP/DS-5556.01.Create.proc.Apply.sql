@@ -3,4 +3,5 @@ GO
 
 SELECT 'ASDF';
 PRINT 'Line 2';
+PRINT 'Line 3';
 GO

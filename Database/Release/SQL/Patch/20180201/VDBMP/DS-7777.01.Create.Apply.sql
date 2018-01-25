@@ -1,3 +1,4 @@
 PRINT 'New apply for 20180124';
 PRINT '20180123 02:50 PM';
+PRINT 'Line 2';
 GO
