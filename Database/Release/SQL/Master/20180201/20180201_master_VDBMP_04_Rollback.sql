@@ -2,7 +2,7 @@
 -- Description:	SQL Release Script
 -- Created by: Data Services
 -- Machine: USHGNDBWD018
--- Created on: 2018-01-23 21: 13:54
+-- Created on: 2018-01-25 00: 25:43
 -- Path: /Database/Release/SQL/Master/20180201/20180201_master_VDBMP_04_Rollback.sql
 -- Sprint: 20180201 VDBMP
 -- Filter: Rollback
@@ -107,7 +107,7 @@ GO
 
 --Add event
 INSERT INTO dbo.dbverinfo (BuildConfigId, BuildKey, EventNote, MasterType, EventDate)
-	VALUES (15, '61af8a8e-5ddd-4849-b937-e0182c6bede6', '20180201 VDBMP', 'Rollback', GETDATE());
+	VALUES (15, '885de98f-1f0b-41b2-8691-846a9fa6b4b1', '20180201 VDBMP', 'Rollback', GETDATE());
 GO
 
 --=====FOOTER=====================================================================================
