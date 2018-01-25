@@ -1,0 +1,5 @@
+USE CRM;
+GO
+
+PRINT 'Line1';
+GO
