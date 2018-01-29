@@ -2,4 +2,5 @@ USE CRM;
 GO
 
 PRINT 'Line1';
+PRINT 'Line2';
 GO
